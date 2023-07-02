@@ -101,7 +101,7 @@ module.exports.deleteQuestion = async function(req, res){
                 }
         }else{
             return res.json(201, {
-                message: 'Question already voted!So it can\'t be deleted!'
+                message: 'Question cannot be deleted as one of its options has votes'
             });
         }
     }else{
@@ -109,6 +109,6 @@ module.exports.deleteQuestion = async function(req, res){
             message: 'Question not found!'
         });
     }
-    
 
+    
 }
